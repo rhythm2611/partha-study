@@ -1,0 +1,66 @@
+---- local --> github ---> pipeline (ci/cd) ----> server  
+
+1. staging ---> www.staging.domain.com
+2. production ---> www.domain.com
+
+Relationships
+
+1. One to one
+2. One to Many
+3. Many to One
+4. Many to Many
+
+students (1 student have one address and one phone number)
+
+Address, Phone 
+
+students 
+
+id, name, address, phone
+
+
+========
+
+One to One 
+
+students (hasOne)
+
+id , name 
+
+
+student_informations  (belongsTo)
+
+id, student_id, address, phone, voterid, aadh, etc..
+
+====
+
+One to Many 
+
+students (hasMany)
+
+id , name
+
+
+student_informations (belongsTo)
+
+id, student_id, address, phone, voterid, aadh, etc
+
+====
+
+Many to Many  
+
+A product belongs to many categories (belongsToMany)
+
+A category has many products (belongsToMany)
+
+expl : Men , Women (Catgeory)
+
+Tshirt, Shirt, Kurta (Product)
+
+products  id, name
+
+categories id , name
+
+product_category (Pivot table)
+
+id, product_id, category_id
