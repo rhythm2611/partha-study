@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/test', 'Admin\HomeController@index');
+// Route::get('/test', 'Admin\HomeController@index');
+Route::get('/', [RegisterController::class, 'index']);
+Route::get('/view', [RegisterController::class, 'view']);
+Route::post('/register', [RegisterController::class, 'store']);

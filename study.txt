@@ -64,3 +64,11 @@ categories id , name
 product_category (Pivot table)
 
 id, product_id, category_id
+
+
+Exercise : student_documents
+
+name, file
+
+2. Show those students who has their aadhar card
+3. Show those students who has their aadhar card and phone no
