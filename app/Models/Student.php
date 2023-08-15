@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\StudentInformation;
+use App\Models\StudentDocument;
+use App\Models\Activity;
 
 class Student extends Model
 {
@@ -19,5 +21,16 @@ class Student extends Model
     //return $this->hasOne('App\Phone', 'foreign_key', 'local_key');
     return $this->hasMany(StudentInformation::class,'student_id','s_id');
     }
+
+    public function student_docs()   
+    {
+    //return $this->hasOne('App\Phone', 'foreign_key', 'local_key');
+    return $this->hasMany(StudentDocument::class,'student_id','s_id');
+    }
+
+    public function activities()
+    {
+        return $this->belongsToMany(Activity::class,'student_activities', 's_id', 'activity_id');
+    } 
 
 }

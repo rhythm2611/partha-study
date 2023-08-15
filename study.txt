@@ -72,3 +72,32 @@ name, file
 
 2. Show those students who has their aadhar card
 3. Show those students who has their aadhar card and phone no
+
+
+git add .
+git commit -m "second class"
+git push origin master
+
+
+has, whereHas, with
+
+latest, oldest, pluck, limit, paginate, find, findOrFail, firstOrFail
+
+attach, detach, sync
+
+create, createMany, updateOrCreate, 
+
+https://laravel.com/docs/8.x/eloquent#retrieving-or-creating-models
+php artisan storage:link
+
+
+public --> admin --> css , js , images etc
+           design --> css , js , images etc
+
+resources -> admin -> users -> index.blade, create.blade.php
+
+1. Route Naming
+2. Group Routes
+3. Add middleware, prefix, namespace, alias (as)
+4. match, any
+5. query string, param, optional param
